@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappy: Police Mouse</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#000; display:flex; justify-content:center; align-items:center; min-height:100vh; }
+    canvas { display:block; }
+  </style>
+</head>
+<body>
+  <canvas id="c" width="640" height="480"></canvas>
+
+  <!--
+    Load order matters — each file can reference globals defined in earlier files.
+    To edit a feature, open only the file that owns it (see README.md).
+  -->
+  <script src="src/constants.js"></script>  <!-- palette, sprite art, geometry layouts -->
+  <script src="src/audio.js"></script>       <!-- Web Audio sfx + music -->
+  <script src="src/level.js"></script>       <!-- buildLevel, platform segments -->
+  <script src="src/state.js"></script>       <!-- game state vars, entity factories -->
+  <script src="src/physics.js"></script>     <!-- resolveEntity, collision -->
+  <script src="src/input.js"></script>       <!-- keyboard handlers -->
+  <script src="src/gameflow.js"></script>    <!-- startGame, death, shockwave helpers -->
+  <script src="src/update.js"></script>      <!-- main update() loop -->
+  <script src="src/sprites.js"></script>     <!-- drawMappy, drawCat, drawDoor … -->
+  <script src="src/hud.js"></script>         <!-- HUD, screens, scroll text -->
+  <script src="src/main.js"></script>        <!-- render() + game loop bootstrap -->
+</body>
+</html>
