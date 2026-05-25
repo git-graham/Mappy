@@ -142,7 +142,7 @@ function update(dtSec){
           if(crossesCol){
             const catFoot   = cat.y + cat.h;
             const floorY    = FLOOR_Y[sw.floor];
-            const tolerance = RISE_SPD * 4;
+            const tolerance = 3.2 * 4;
             inChannelOnFloor = Math.abs(catFoot - floorY) <= tolerance;
           }
         }
